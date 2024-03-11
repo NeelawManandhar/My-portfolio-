@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neelaw's Portfolio</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <nav class="site-navbar">
+      <div class="navbar">
+        <div class="left-side">
+          <a href="#"> Neelaw Manandhar </a>
+        </div>
+        <div class="right-side">
+          <ul class="menu" id="main-menu">
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Services</a>
+            </li>
+            <li>
+              <a href="">Portfolio</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar section -->
+    <div class="hero-section">
+      <div class="hero-section-wrapper">
+        <div class="hero-left-side">
+          <img src="myPic.jpg" />
+        </div>
+        <div class="hero-right-side">
+          <h1 class="hero-title">Hey <span class="highlight">There!</span></h1>
+          <p>
+            I'm <b>Neelaw Manandhar!</b> A student with big dreams of becoming a
+            super-skilled developer. I'm on this exciting journey because I just
+            love turning cool ideas into even cooler solutions. <br />
+            Always hungry to learn and create!
+          </p>
+          <div class="icons">
+            <a href="https://www.facebook.com/neelaw.manandhar/">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/neelaw_manandhar/">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://github.com/NeelawManandhar" class="github">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of hero section -->
+    <div class="services">
+      <div class="services-wrapper">
+        <div class="section-title-area">
+          <h2 class="section-title">Services</h2>
+          <p>Here are the services I provide!</p>
+        </div>
+        <div class="services-list">
+          <div class="service">
+            <div class="tagIcons">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <h2 class="service-title">HTML</h2>
+            <p>
+              HTML, or HyperText Markup Language, is the standard tool for
+              crafting web pages. Through elements like tags and attributes, it
+              enables the creation and organization of sections, paragraphs, and
+              links, making it the go-to for various web development needs.
+            </p>
+          </div>
+          <div class="service">
+            <div class="tagIcons">
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <h2 class="service-title">CSS</h2>
+            <p>
+              CSS, or Cascading Style Sheets, is the go-to tool for styling and
+              structuring web pages. It empowers you to customize the font,
+              color, size, and spacing of your content, create multiple columns,
+              and infuse animations and decorative elements for a polished and
+              visually appealing website.
+            </p>
+          </div>
+          <div class="service">
+            <div class="tagIcons"><i class="fa-brands fa-square-js"></i></div>
+            <h2 class="service-title">JS</h2>
+            <p>
+              JavaScript is not just a language; it's the magic wand for
+              transforming static web pages into dynamic, interactive
+              experiences. With its scripting prowess, you can bring your pages
+              to life, delivering timely content updates, interactive maps,
+              captivating 2D/3D graphics, and even crafting scrolling video
+              jukeboxes. It's the key to unlocking a world of engaging
+              possibilities on the web.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Services -->
+
+    <div class="contact-form">
+      <div class="contact-form-wrapper">
+        <div class="section-title-area">
+          <h2 class="section-title">Contact Me !!!</h2>
+          <p>Send me a message</p>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              name="fname"
+              id="name"
+              placeholder="Enter your full name."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="name"
+              placeholder="Enter your email."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Feedback:</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Type your message."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <input type="button" value="Send Message" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- contact form end -->
+
+    <footer class="main-footer">
+      <h2 class="footer-title">Good Day!</h2>
+      <p>&copy; NeelawManandhar - 2024</p>
+    </footer>
+  </body>
+</html>
