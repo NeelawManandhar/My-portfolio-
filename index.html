@@ -1,176 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neelaw's Portfolio</title>
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neelaw Manandhar — Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
 
-  <body>
-    <nav class="site-navbar">
-      <div class="navbar">
-        <div class="left-side">
-          <a href="#"> Neelaw Manandhar </a>
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">NM<span class="blink">_</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">DEV</div>
+    <div class="hero-content">
+      <div class="hero-tag reveal"><span class="tag-dot"></span>Available for opportunities</div>
+      <h1 class="hero-name reveal">
+        <span class="line">Neelaw</span>
+        <span class="line accent-line">Manandhar</span>
+      </h1>
+      <p class="hero-sub reveal">Full-Stack Developer &amp; IT Consultant based in Kathmandu, Nepal</p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-floats">
+      <div class="float-tag f1">PHP</div>
+      <div class="float-tag f2">React</div>
+      <div class="float-tag f3">MySQL</div>
+      <div class="float-tag f4">Node.js</div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label"><span>01</span> About Me</div>
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <div class="avatar-wrap">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="avatar-badge">CS</div>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-target="3">0</span>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="3">0</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="3">0</span>
+              <span class="stat-label">Languages</span>
+            </div>
+          </div>
         </div>
-        <div class="right-side">
-          <ul class="menu" id="main-menu">
-            <li>
-              <a href="">Home</a>
-            </li>
-            <li>
-              <a href="">Services</a>
-            </li>
-            <li>
-              <a href="">Portfolio</a>
-            </li>
-            <li>
-              <a href="">Contact</a>
-            </li>
+        <div class="about-right reveal">
+          <h2>Building things for the web, one line at a time.</h2>
+          <p>I'm a Computer Science student at Madan Bhandari Memorial College (graduating 2025) with hands-on experience in full-stack web development. I've worked as an IT Consultant and built real-world applications covering everything from e-commerce to clinic management systems.</p>
+          <p>I thrive at the intersection of clean code and practical problem-solving, with a strong foundation in both front-end interfaces and back-end database architecture.</p>
+          <div class="about-langs">
+            <div class="lang-chip"><i class="fas fa-globe"></i> Nepali — Native</div>
+            <div class="lang-chip"><i class="fas fa-globe"></i> English — Proficient</div>
+            <div class="lang-chip"><i class="fas fa-globe"></i> Nepa Bhasa — Fluent</div>
+          </div>
+          <div class="edu-cards">
+            <div class="edu-card">
+              <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="edu-info">
+                <strong>B.Sc. Computer Science / IT</strong>
+                <span>Madan Bhandari Memorial College · 2021–2025</span>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-icon"><i class="fas fa-school"></i></div>
+              <div class="edu-info">
+                <strong>Higher Secondary — Computer Science</strong>
+                <span>Everest College · GPA 3.7 · 2020–2021</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label"><span>02</span> Skills</div>
+      <h2 class="section-title reveal">Technical Arsenal</h2>
+      <div class="skills-grid">
+        <div class="skill-card reveal" data-delay="0">
+          <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span>C</span><span>Java</span><span>JavaScript</span><span>PHP</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="100">
+          <div class="skill-card-icon"><i class="fas fa-globe"></i></div>
+          <h3>Web Development</h3>
+          <div class="skill-tags">
+            <span>HTML</span><span>CSS</span><span>React</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="200">
+          <div class="skill-card-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile & Frameworks</h3>
+          <div class="skill-tags">
+            <span>React Native</span><span>.NET (C#)</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="300">
+          <div class="skill-card-icon"><i class="fas fa-database"></i></div>
+          <h3>Databases & Tools</h3>
+          <div class="skill-tags">
+            <span>MySQL</span><span>MongoDB</span><span>MySQL Workbench</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="400">
+          <div class="skill-card-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>Other Skills</h3>
+          <div class="skill-tags">
+            <span>Networking</span><span>Hardware Troubleshooting</span><span>IT Support</span>
+          </div>
+        </div>
+        <div class="skill-card reveal certifications" data-delay="500">
+          <div class="skill-card-icon"><i class="fas fa-certificate"></i></div>
+          <h3>Certifications</h3>
+          <ul class="cert-list">
+            <li><i class="fas fa-check-circle"></i> .NET Programming Basics</li>
+            <li><i class="fas fa-check-circle"></i> Java Programming Basics</li>
+            <li><i class="fas fa-check-circle"></i> Programming Foundations</li>
+            <li><i class="fas fa-check-circle"></i> Career Skills in Software Dev</li>
           </ul>
         </div>
       </div>
-    </nav>
-    <!-- end of navbar section -->
-    <div class="hero-section">
-      <div class="hero-section-wrapper">
-        <div class="hero-left-side">
-          <img src="myPic.jpg" />
-        </div>
-        <div class="hero-right-side">
-          <h1 class="hero-title">Hey <span class="highlight">There!</span></h1>
-          <p>
-            I'm <b>Neelaw Manandhar!</b> A student with big dreams of becoming a
-            super-skilled developer. I'm on this exciting journey because I just
-            love turning cool ideas into even cooler solutions. <br />
-            Always hungry to learn and create!
-          </p>
-          <div class="icons">
-            <a href="https://www.facebook.com/neelaw.manandhar/">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/neelaw_manandhar/">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://github.com/NeelawManandhar" class="github">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
-    <!-- end of hero section -->
-    <div class="services">
-      <div class="services-wrapper">
-        <div class="section-title-area">
-          <h2 class="section-title">Services</h2>
-          <p>Here are the services I provide!</p>
-        </div>
-        <div class="services-list">
-          <div class="service">
-            <div class="tagIcons">
-              <i class="fa-brands fa-html5"></i>
-            </div>
-            <h2 class="service-title">HTML</h2>
-            <p>
-              HTML, or HyperText Markup Language, is the standard tool for
-              crafting web pages. Through elements like tags and attributes, it
-              enables the creation and organization of sections, paragraphs, and
-              links, making it the go-to for various web development needs.
-            </p>
-          </div>
-          <div class="service">
-            <div class="tagIcons">
-              <i class="fa-brands fa-css3-alt"></i>
-            </div>
-            <h2 class="service-title">CSS</h2>
-            <p>
-              CSS, or Cascading Style Sheets, is the go-to tool for styling and
-              structuring web pages. It empowers you to customize the font,
-              color, size, and spacing of your content, create multiple columns,
-              and infuse animations and decorative elements for a polished and
-              visually appealing website.
-            </p>
-          </div>
-          <div class="service">
-            <div class="tagIcons"><i class="fa-brands fa-square-js"></i></div>
-            <h2 class="service-title">JS</h2>
-            <p>
-              JavaScript is not just a language; it's the magic wand for
-              transforming static web pages into dynamic, interactive
-              experiences. With its scripting prowess, you can bring your pages
-              to life, delivering timely content updates, interactive maps,
-              captivating 2D/3D graphics, and even crafting scrolling video
-              jukeboxes. It's the key to unlocking a world of engaging
-              possibilities on the web.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End of Services -->
+  </section>
 
-    <div class="contact-form">
-      <div class="contact-form-wrapper">
-        <div class="section-title-area">
-          <h2 class="section-title">Contact Me !!!</h2>
-          <p>Send me a message</p>
+  <!-- Projects -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-label"><span>03</span> Projects</div>
+      <h2 class="section-title reveal">What I've Built</h2>
+      <div class="projects-grid">
+
+        <div class="project-card reveal" data-delay="0">
+          <div class="project-num">01</div>
+          <div class="project-icon"><i class="fas fa-vote-yea"></i></div>
+          <h3>Voting App</h3>
+          <p>Full-stack web voting application with secure authentication, real-time results, and a normalized MySQL schema.</p>
+          <div class="project-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+          </div>
+          <div class="project-features">
+            <div class="feature"><i class="fas fa-shield-alt"></i> Secure Auth</div>
+            <div class="feature"><i class="fas fa-chart-bar"></i> Real-time Results</div>
+            <div class="feature"><i class="fas fa-database"></i> Normalized Schema</div>
+          </div>
         </div>
-        <form>
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input
-              type="text"
-              name="fname"
-              id="name"
-              placeholder="Enter your full name."
-              required
-            />
+
+        <div class="project-card reveal" data-delay="150">
+          <div class="project-num">02</div>
+          <div class="project-icon"><i class="fas fa-clinic-medical"></i></div>
+          <h3>Clinic Website</h3>
+          <p>Patient-facing clinic site with doctor profiles, appointment booking, and a full admin panel for schedule management.</p>
+          <div class="project-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+          </div>
+          <div class="project-features">
+            <div class="feature"><i class="fas fa-calendar-check"></i> Appointment Booking</div>
+            <div class="feature"><i class="fas fa-user-md"></i> Doctor Profiles</div>
+            <div class="feature"><i class="fas fa-cogs"></i> Admin Panel</div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-delay="300">
+          <div class="project-num">03</div>
+          <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+          <h3>E-commerce Platform</h3>
+          <p>Full e-commerce platform with product listings, cart, user auth, and order checkout — backed by relational MySQL schemas.</p>
+          <div class="project-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+          </div>
+          <div class="project-features">
+            <div class="feature"><i class="fas fa-shopping-bag"></i> Cart System</div>
+            <div class="feature"><i class="fas fa-lock"></i> User Auth</div>
+            <div class="feature"><i class="fas fa-receipt"></i> Order Checkout</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-label"><span>04</span> Experience & Organizations</div>
+      <h2 class="section-title reveal">Journey So Far</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jan 2021 – Dec 2021</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="tl-icon"><i class="fas fa-laptop-code"></i></div>
+              <div>
+                <h3>IT Consultant</h3>
+                <span class="tl-company">Freelance / Contract — Lalitpur, Nepal</span>
+              </div>
+            </div>
+            <ul>
+              <li>Delivered technical support across software and hardware issues, improving operational reliability for client teams.</li>
+              <li>Implemented IT solutions and configured systems to streamline workflows and reduce manual overhead.</li>
+              <li>Trained end users on new tools and processes, accelerating adoption and reducing repeat support requests.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Feb 2025 – Present</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="tl-icon"><i class="fas fa-users"></i></div>
+              <div>
+                <h3>General Member</h3>
+                <span class="tl-company">Code For Change — Kathmandu</span>
+              </div>
+            </div>
+            <ul>
+              <li>Active contributor to a tech-for-good organization focused on using code to drive social impact in Nepal.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jul 2022 – Present</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="tl-icon"><i class="fas fa-university"></i></div>
+              <div>
+                <h3>Council Member</h3>
+                <span class="tl-company">Student Council — Madan Bhandari Memorial College</span>
+              </div>
+            </div>
+            <ul>
+              <li>Representing students and contributing to campus governance and academic initiatives.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label"><span>05</span> Contact</div>
+      <h2 class="section-title reveal">Let's Work Together</h2>
+      <p class="contact-sub reveal">Open to internships, freelance projects, and full-time roles. Drop me a message!</p>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <a href="tel:9808227794" class="contact-item">
+            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+            <div class="ci-text">
+              <span class="ci-label">Phone</span>
+              <span class="ci-val">9808227794</span>
+            </div>
+          </a>
+          <a href="mailto:neelawmanandhar@gmail.com" class="contact-item">
+            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+            <div class="ci-text">
+              <span class="ci-label">Email</span>
+              <span class="ci-val">neelawmanandhar@gmail.com</span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="ci-text">
+              <span class="ci-label">Location</span>
+              <span class="ci-val">Kathmandu, Nepal</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" required />
+            </div>
           </div>
           <div class="form-group">
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              id="name"
-              placeholder="Enter your email."
-              required
-            />
+            <label>Message</label>
+            <textarea rows="5" placeholder="Tell me about your project..." required></textarea>
           </div>
-          <div class="form-group">
-            <label for="message">Feedback:</label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Type your message."
-            ></textarea>
-          </div>
-          <div class="form-group">
-            <input type="button" value="Send Message" />
+          <button type="submit" class="btn btn-primary full-width">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Message sent! I'll be in touch soon.
           </div>
         </form>
       </div>
     </div>
-    <!-- contact form end -->
+  </section>
 
-    <footer class="main-footer">
-      <h2 class="footer-title">Good Day!</h2>
-      <p>&copy; NeelawManandhar - 2024</p>
-    </footer>
-  </body>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">NM<span class="blink">_</span></div>
+        <p>© 2025 Neelaw Manandhar. Built with care in Kathmandu.</p>
+        <div class="footer-socials">
+          <a href="mailto:neelawmanandhar@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tel:9808227794" aria-label="Phone"><i class="fas fa-phone"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
