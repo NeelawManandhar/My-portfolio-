@@ -94,7 +94,7 @@ img { max-width: 100%; display: block; }
   gap: 5px;
   background: none;
   border: none;
-  cursor: none;
+  cursor: pointer;
   padding: 4px;
 }
 .nav-toggle span {
@@ -789,23 +789,145 @@ img { max-width: 100%; display: block; }
 }
 
 /* ========================
-   Responsive
+   Responsive — Tablet
 ======================== */
 @media (max-width: 1024px) {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .about-left { max-width: 280px; }
+  .about-left { max-width: 320px; margin: 0 auto; }
   .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-floats { right: 2%; }
 }
 
+/* ========================
+   Responsive — Mobile
+======================== */
 @media (max-width: 768px) {
+  /* Nav */
+  .nav { padding: 0 6%; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
+  .nav.scrolled { background: rgba(5,15,10,0.97); }
+
+  /* Mobile menu improved */
+  .mobile-menu { padding: 1.5rem 6% 2rem; background: rgba(5,15,10,0.98); }
+  .mobile-menu ul { gap: 0; }
+  .mobile-menu a {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    letter-spacing: -0.02em;
+  }
+  .mobile-menu ul li:last-child a { border-bottom: none; }
+  .mobile-menu a:active { color: var(--accent); }
+
+  /* Hero */
+  .hero { padding: 0 6%; padding-top: var(--nav-h); min-height: 100svh; align-items: center; }
+  .hero-bg-text { font-size: 40vw; right: -5%; opacity: 0.6; }
   .hero-floats { display: none; }
-  .skills-grid { grid-template-columns: 1fr; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer-inner { flex-direction: column; text-align: center; }
-  .section { padding: 5rem 0; }
+  .hero-name { font-size: clamp(2.8rem, 13vw, 5rem); }
+  .hero-sub { font-size: 0.95rem; }
+  .hero-cta { flex-direction: column; gap: 0.75rem; }
+  .hero-cta .btn { width: 100%; justify-content: center; border-radius: 12px; padding: 1rem 1.5rem; font-size: 1rem; }
+  .hero-tag { font-size: 0.72rem; }
+  .hero-scroll { display: none; }
+
+  /* Sections */
+  .section { padding: 4rem 0; }
+  .container { padding: 0 6%; }
+  .section-title { font-size: clamp(1.8rem, 7vw, 2.5rem); margin-bottom: 2.5rem; }
+  .section-label { margin-bottom: 1rem; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-left { max-width: 100%; text-align: center; }
+  .avatar-wrap { margin: 0 auto 2rem; }
+  .about-stats { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .stat { padding: 0.75rem 0.25rem; }
+  .stat-num { font-size: 1.6rem; }
+  .stat-label { font-size: 0.62rem; }
+  .about-right h2 { font-size: 1.3rem; }
+  .about-right p { font-size: 0.88rem; }
+  .about-langs { gap: 0.4rem; }
+  .lang-chip { font-size: 0.68rem; padding: 0.3rem 0.65rem; }
+  .edu-cards { gap: 0.75rem; }
+  .edu-card { padding: 0.9rem 1rem; }
+  .edu-info strong { font-size: 0.82rem; }
+  .edu-info span { font-size: 0.68rem; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .skill-card { padding: 1.5rem; }
+  .skill-card-icon { width: 40px; height: 40px; font-size: 1rem; margin-bottom: 1rem; }
+  .skill-card h3 { font-size: 0.95rem; }
+  .skill-tags span { font-size: 0.68rem; }
+  .cert-list li { font-size: 0.78rem; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .project-card { padding: 2rem 1.5rem; }
+  .project-num { font-size: 4rem; }
+  .project-icon { width: 48px; height: 48px; font-size: 1.3rem; margin-bottom: 1.2rem; }
+  .project-card h3 { font-size: 1.15rem; }
+  .project-card p { font-size: 0.82rem; }
+  .project-stack span { font-size: 0.65rem; }
+  .feature { font-size: 0.75rem; }
+
+  /* Experience */
+  .timeline { padding-left: 1.2rem; }
+  .timeline-item { padding-left: 1.8rem; margin-bottom: 2rem; }
+  .timeline-dot { left: -1.65rem; }
+  .timeline-date { font-size: 0.68rem; }
+  .timeline-card { padding: 1.25rem; }
+  .timeline-header { gap: 0.75rem; }
+  .tl-icon { width: 38px; height: 38px; font-size: 0.9rem; }
+  .timeline-header h3 { font-size: 1rem; }
+  .tl-company { font-size: 0.7rem; }
+  .timeline-card ul li { font-size: 0.8rem; }
+
+  /* Contact */
+  .contact-sub { font-size: 0.9rem; margin-bottom: 2.5rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .contact-info { gap: 0.75rem; }
+  .contact-item { padding: 1rem; }
+  .ci-icon { width: 38px; height: 38px; font-size: 0.9rem; }
+  .ci-label { font-size: 0.62rem; }
+  .ci-val { font-size: 0.82rem; }
+  .form-row { grid-template-columns: 1fr; gap: 1rem; }
+  .form-group label { font-size: 0.7rem; }
+  .form-group input, .form-group textarea { font-size: 1rem; padding: 0.9rem 1rem; }
+  .btn.full-width { padding: 1rem; font-size: 1rem; }
+
+  /* Footer */
+  .footer { padding: 2rem 0; }
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
+  .footer p { font-size: 0.72rem; }
+  .footer-socials a { width: 42px; height: 42px; font-size: 1rem; }
+}
+
+/* ========================
+   Responsive — Small phones
+======================== */
+@media (max-width: 380px) {
+  .hero-name { font-size: 2.5rem; }
+  .about-stats { grid-template-columns: repeat(3, 1fr); }
+  .stat-num { font-size: 1.4rem; }
+  .project-card { padding: 1.5rem 1.2rem; }
+  .timeline-card { padding: 1rem; }
+}
+
+/* Touch-friendly tap targets */
+@media (hover: none) {
+  .btn, a, button { -webkit-tap-highlight-color: rgba(61,255,160,0.15); }
+  .project-card:active { transform: scale(0.98); border-color: var(--border-accent); }
+  .skill-card:active { transform: scale(0.98); border-color: var(--border-accent); }
+  .contact-item:active { transform: translateX(4px); border-color: var(--border-accent); }
+  .edu-card:active { border-color: var(--border-accent); }
+  .btn-primary:active { transform: scale(0.97); }
+  .btn-ghost:active { color: var(--accent); border-color: var(--accent); }
+  .footer-socials a:active { color: var(--accent); border-color: var(--border-accent); }
 }
